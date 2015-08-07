@@ -5,7 +5,7 @@ define postgresql::service (
   include ::postgresql::server
 
   $service = $::operatingsystem ? {
-    /(?i-mx:centos|fedora|redhat|scientific)/ => 'nginx',
+    /(?i-mx:centos|fedora|redhat|scientific)/ => 'postgresql',
   }
 
   service { $service:
